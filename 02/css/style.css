@@ -1,0 +1,71 @@
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.navbar-row{ background-color: #cccccc; }
+.bg-light{
+	background: #cccccc !important;
+}
+.about-section h2, .service-section h2{
+	padding-bottom: 0px;
+}
+.orange-line{
+	height:2px;
+	width:150px;
+	background-color:orange;
+	margin:0 auto;
+}
+.orange-lines{
+	height:2px;
+	width:150px;
+	background-color:orange;
+	
+}
+.about-section p {
+	padding:2% 10% 0% 10%;
+	font-size: 20px;
+}
+.service-section h1{
+	font-size: 60px;
+}
+.why-section .media .media-left img{
+	width:60px;
+}
+.why-section .media-body{
+	padding-left:15px;
+}
+.foot-section{
+	background-color: #cccccc;
+	color:#ffffff;
+}
+.btn1{
+	text-decoration: none;
+	height:60px !important;
+	width:600px !important;
+	text-align: center;
+	color:orange;
+	font-size:15px;
+	text-transform: uppercase;
+	border:1px solid green;
+	padding:7px 20px;
+	border-radius: 20px;
+	line-height: 1.5rem;
+}
+.first-para{
+	padding-bottom:8px;
+}
+
+.btn1:hover{
+text-decoration: none;
+}
+.circle-1{
+	background-image: url('img/prifile-female.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	height:200px;
+	width:200px;
+	border-radius: 50%;
+	border:1px solid #000;
+	box-shadow: 0 0 5px #cccccc;
+	margin:0 auto;
+}
+
