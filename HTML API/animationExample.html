@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation Example</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="./animations.css"> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+	<link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
+	<style type="text/css">
+		.animation-box{
+			height:100px;
+			width:100px;
+			border-radius:0px;
+			background-color: red;
+			position: relative;
+			animation:example 3s ease-in-out 0s infinite alternate;
+		}
+
+		@keyframes example{
+			0%{ background-color:red; left:0px; top:0px; }
+			25%{ background-color:green; left:300px; top:0px;}
+			50%{ background-color:blue; left:300px; top:150px;}
+			75%{ background-color:yellow;left:0px; top:150px; }
+			100%{ background-color:gray; left:0px; top:0px;}
+		}
+
+		.animation-box1{
+			margin-top:50px;
+			height:200px;
+			width:200px;
+			background-color: skyblue;
+			border:1px solid skyblue;
+			border-top-right-radius:100px;
+			border-bottom-left-radius:100px;
+			position: relative;
+			left:90px;
+			top:0px;
+			animation: rotateElt 1.5s ease-in-out 0s infinite alternate;
+		}
+		@keyframes rotateElt{
+			from {  transform:rotate(0deg)}
+			to { transform:rotate(2080deg) }
+		}
+
+		
+
+		@keyframes example1{
+			from { border-top-right-radius:0px; }
+			to{ border-top-right-radius:150px; }
+		}
+
+		.squar1{
+			height:150px;
+			width:150px;
+			background-color: red;
+			border-radius: 3px;
+			position: absolute;
+		}
+
+		.squar2{
+			height:150px;
+			width:150px;
+			background-color: yellow;
+			border-radius: 3px;
+			position: absolute;
+			animation:moveBox 2s linear 2s infinite alternate ;
+		}
+		
+		@keyframes moveBox{
+			from { transform:translate(0px,0px) }
+			to { transform:translate(20px,20px) }
+		}
+
+		.skew-box{
+			height:200px;
+			width:200px;
+			background-color: #3dfcfc;
+			border-radius:3px;
+			animation:skewBox 2s linear 0s infinite alternate;
+			position:relative;
+			left:100px;
+		}
+		@keyframes skewBox{
+			from { transform:skew(0deg) }
+			to { transform:skew(-40deg) }
+		}
+
+		.rotate-box{
+			height:150px;
+			width:150px;
+			background-color: skyblue;
+			border-top-left-radius:3px;
+			border-top-right-radius:50px;
+			border-bottom-right-radius:3px;
+			border-bottom-left-radius: 50px;
+			margin:200px auto;
+			animation: patti 2s linear 0s infinite alternate;
+			transform-origin:left top;
+		}
+
+		@keyframes patti{
+			from { transform:rotate(0deg) }
+			to {  transform:rotate(500deg) }
+		}
+
+		span{
+			transition: all 0.5s linear;
+		}
+		.sub-btn:hover span{
+			padding-left:7px;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<h1> Animation for moving element example </h1>
+			<div class="animation-box"></div>
+		</div>
+		<div class="col-md-4">
+			<h1> Animation for rotate element example </h1>
+			<div class="animation-box1"></div>
+		</div>
+		<div class="col-md-4">
+			<h1> Animation for moving element example </h1>
+			<div class="squar1"></div>
+			<div class="squar2"></div>
+		</div>
+	</div>
+	<div class="row pt-5">
+		<div class="col-md-4">
+			<h1> Animation for Skew element example </h1>
+			<div class="skew-box"></div>
+		</div>
+		<div class="col-md-4">
+			<h1> Animation for Rotate element example </h1>
+			<div class="rotate-box"></div>
+		</div>
+		<div class="col-md-4">
+			
+		</div>
+	</div>
+
+	<!-- Animated css -->
+	<div class="row pt-5 pb-5">
+		<div class="col-md-6">
+			
+			<p class='wow fadeInDown data-wow-duration="1s" data-wow-delay="0s"' >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<p class='wow fadeInUp' data-wow-duration="1s" data-wow-delay="0s"'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		
+	</div>
+
+	<div class="row pt-5 pb-5">
+		<div class="col-md-12 text-center">
+			<button class="btn btn-info sub-btn">Submit <span > &nbsp;>> </span></button>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://wowjs.uk/dist/wow.min.js"></script>
+  <!-- <script src="js/wow.min.js"></script> -->
+  <script>
+  new WOW().init();
+  </script>
+ 
+
+</body>
+</html>

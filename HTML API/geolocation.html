@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Geolocation</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+		<br>
+		<p>To get Geolocation of user on button click </p>
+		<button onclick="getLocation()">Get Location </button>
+		<p id="result-box"> </p>
+		<div id="map"></div>
+	</div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+var L = document.getElementById("result-box");
+
+function getLocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition,showError);
+	}else{
+		L.innerHTML = "Geolocation not suppoted this browser";
+	}
+}
+
+ // Show Position
+function showPosition(position){
+	var latlong = position.coords.latitude  + "," + position.coords.longitude ;
+	var img_url = 'https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyDKj1S77dpgWyV4xclGNwIyvMn89SiFh0s';
+	document.getElementById("result-box").innerHTML = "<img src='"+ img_url +"' alt='img'>";
+}
+
+// Show Error Message
+function showError(error){
+	switch(error.code){
+		case error.PERMISSION_DENIDE:
+			L.innerHTML = "Permission denide error ";
+			break;
+		case error.POSITION_UNAVAILABLE:
+			L.innerHTML = "Position unavailabel error ";
+			break;
+		case error.TIMEOUT:
+			L.innerHTML = "Time out error ";
+			break;
+		case error.UNKNOWN_ERROR:
+			L.innerHTML = "Unkonwn erro ";
+			break;
+	}
+}
+
+</script>
+<script>
+function initMap() {
+  var uluru = {lat: -25.344, lng: 131.036};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKj1S77dpgWyV4xclGNwIyvMn89SiFh0s&callback=initMap">
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Webstorage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+		<br>
+		<p>Example Local Storage </p>
+		<!-- // <button onclick="deleteData()">Remove Item </button> -->
+		<!-- <button onclick="ClickcountersLocal()">Click counter check using local Storage </button> -->
+		<button onclick="ClickcountersSession()">Click counter check using Session Storage </button><br><br>
+		<button onclick="showBrothername()">Show list of Name </button>
+		<button onclick="addName()">Add name</button>
+		<button onclick="showAllName()">Show All Name</button>
+		<p id="result-box"> </p>
+	</div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+
+	// if( typeof(Storage) !== "undefined" ){
+
+	// 	localStorage.setItem("Firstname","Sandip");
+	// 	localStorage.setItem("Lastname","Patil");
+
+	// 	document.getElementById("result-box").innerHTML = localStorage.getItem("Firstname") + " &nbsp;" + localStorage.getItem("Lastname"); ; 
+	// }
+	// function deleteData(){
+	// 	console.log("in remove function");
+	// 	localStorage.removeItem("Lastname");
+	// }
+
+
+	if( typeof(Storage) !== "undefined" ){
+
+		var nameArr = [];
+		nameArr.push("Sandip","Mahesh","Amar");
+		localStorage.setItem("brothers",JSON.stringify(nameArr));
+	}
+	else{
+			document.getElementById("result-box").innerHTML ="This browser does not support Webstorage" 
+	}
+
+	function showBrothername(){
+
+		var brothersName = JSON.parse(localStorage.getItem('brothers'));
+		var list = "";
+		for (i = 0; i <= brothersName.length-1; i++)    
+	    {     
+	        list +=brothersName[i] + "<br /> ";    
+	            
+	    } 
+
+	    document.getElementById("result-box").innerHTML  = list;
+		
+	}
+
+	function addName(){
+		nameArr.push("Ramesh","Sanjay");
+		console.log(nameArr);
+		localStorage.setItem("brothers",JSON.stringify(nameArr));
+	}
+
+	function showAllName(){
+
+		var finalList = JSON.parse(localStorage.getItem('brothers'));
+		console.log(finalList);
+		var flist = "";
+		for(var j=0; j<finalList.length; j++){
+			flist += finalList[j] + "<br />" ;
+		}
+		document.getElementById("result-box").innerHTML  = flist;
+	}
+
+
+	function ClickcountersLocal(){
+	
+		if( typeof(Storage) !== "undefined" ){
+
+			if(localStorage.clickcounter){
+				localStorage.clickcounter = Number(localStorage.clickcounter) + 1;
+			}else{
+				localStorage.clickcounter = 1;
+			}
+			document.getElementById('result-box').innerHTML = "Click counter : " + localStorage.clickcounter ; 
+		}else{
+				document.getElementById('result-box').innerHTML = "This browser does not support Webstorage";
+			}
+	}
+
+
+	function ClickcountersSession(){
+		if(typeof(Storage) !== "undefined" ){
+
+			if(sessionStorage.clickcounter){
+				sessionStorage.clickcounter = Number(sessionStorage.clickcounter)+1;
+			}else{
+				sessionStorage.clickcounter = 1;
+			}
+			document.getElementById('result-box').innerHTML = "Click Count:"+ sessionStorage.clickcounter ;
+		}else{
+			document.getElementById('result-box').innerHTML = "This browser does not support to Webstorage";
+		}
+		
+
+	}
+
+</script>
+
+</body>
+</html>
