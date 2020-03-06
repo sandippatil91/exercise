@@ -1,0 +1,298 @@
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+.header-navigation ul li a{
+	font-size:1rem !important;
+	line-height: 1.2;
+	font-weight: normal;
+}
+
+.navbar-brand img{
+	height: 70px;
+    width: 70px;
+}
+
+ .nav-link{
+	color:#3368c6 !important;
+	font-weight: 500;
+	padding: 15px 25px !important;
+	display: inline-block;
+}
+.nav-link:active{
+	font-size:1.5rem !important;
+}
+
+.myCarousel{
+          height:600px !important;
+          margin-bottom:20px;
+        }
+        #carouselExampleIndicators{
+          height: 100% !important;
+        }
+        .carousel-inner{
+          height: 100% !important;
+        }
+        .carousel-inner .carousel-item{
+          height: 100% !important;
+        }
+        .carousel-inner .carousel-item img{
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+        .carousel-inner .carousel-item .carousel-caption h5, .carousel-inner .carousel-item .carousel-caption p{
+          color:#ffffff !important;
+          font-size:20px;
+          line-height: 1.2;
+          font-weight: bold;
+        }
+
+        .carousel-inner .carousel-item .carousel-caption{
+          top: 65%;
+          transform: translateY(-65%);
+          bottom:0px !important;
+          padding-bottom:0px !important;
+        }
+      /* Carousel Styles */
+      .fa-angle-left,  .fa-angle-right{
+        font-size:40px;
+        color:#ffffff;
+        font-weight: normal;
+        line-height: 1.5;
+
+      }
+      .carousel-control-next, .carousel-control-prev{
+        top: 50% !important;
+        width: 50px !important;
+        height: 50px !important;
+        margin-top: -1.5rem;
+        font-size: 35px;
+        /*background-color: #ff8a73 !important;*/
+        border: 0px solid #fff;
+        border-radius: 50%;
+        transition: all .3s;
+        opacity: 1 !important;
+      }
+     .carousel-control-prev{
+        left: 0;
+        margin-left: 2.5rem;
+     }
+     .carousel-control-next{
+        right: 0;
+        margin-right: 2.5rem;
+     }
+    
+    .carousel-indicators li{
+        background-color: #ff8a73 !important;
+        opacity: 0.7!important;
+     }
+     .fa-angle-left:before{
+        margin-left: -6px;
+     }
+     .fa-angle-right:before{
+        margin-left: 4px;
+     }
+
+     .carousel-indicators li{
+      max-width: 15px;
+      height: 15px;
+      max-height: 15px;
+      margin: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 0px solid #fff;
+      border-radius: 50%;
+      opacity: .5;
+      transition: all .3s;
+     }
+
+     .carousel-indicators li.active{
+      opacity: 1 !important;
+     }
+
+     #carouselExampleIndicators{
+     	position: relative;
+     }
+
+     .color-overlay{
+     	position:absolute;
+     	height:100%;
+     	width:100%;
+     	content: '';
+     	background-color:#7d3ed5;
+     	opacity:0.3;
+     }
+
+     .myCarousel .carousel-caption h5{
+     	font-family: 'Poppins',sans-serif;
+	    font-size: 4.625rem !important;
+	    line-height: 83px !important;
+	    font-weight: 700;
+	    color: #ffffff !important;
+     }
+     .myCarousel .carousel-caption p{
+     	font-family: 'Poppins',sans-serif;
+	    font-size: 16px !important;
+	    line-height:2.1 !important;
+	    font-weight: 300;
+	    color: #ffffff !important;
+     }
+
+	.media i{
+		margin-right:20px;
+		background-color:#eef3f9;
+		padding:16px;
+		border-radius:5px;
+		color:#3368c6 !important;
+		font-size: 25px;
+	}
+	.media-box .media-body p{
+		color:#8893b9;
+		font-size:1rem;
+		line-height: 1.2;
+	}
+
+	.technology-box{
+		background:url('../images/slide1.jpg');
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position: 21px -280px;
+		position: relative;
+	}
+
+	.technology-box h4{
+		font-size:2.25rem;
+		line-height:1.4;
+		font-weight:700;
+		color: #031b4e;
+	}
+	.technology-box p{
+		font-size:1rem;
+		font-weight:normal;
+		line-height: 1.6;
+		margin-bottom:1.7em;
+		color:#031b4e;
+	}
+
+	.technology-box .text-mudule p{
+		font-size:1rem;
+		line-height: 1.2;
+		color:#8893b9;
+		font-weight: normal;
+		margin-bottom:10px;
+	}
+
+	.technology-box .text-mudule p i{
+		margin-right:15px;
+		color:#3368c6;
+		font-size:22px;
+		font-weight: 700;
+		vertical-align: middle;
+	}
+	.tech-overlay{
+		position: absolute;
+		content:'';
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background-color:#3368c6;
+		opacity:0.05;
+	}
+	.bottom-line{
+		width:30px;
+		background-color: #3368c6;
+		height:3px;
+		text-align: left;
+		display: inline-block;
+		border-radius:2px;
+		margin-top: 0px;
+		margin-bottom:20px;
+	}
+	.evaluation-section{
+
+	}
+	.evaluation-section h4{
+		font-size: 2.25rem;
+		line-height: 1.4em;
+		font-weight: 500;
+		color:#031b4e;
+	} 
+	.evaluation-section h3{
+		font-size: 2.25rem;
+		line-height: 1.4em;
+		font-weight: 700;
+		color:#031b4e;
+	}
+
+	.evaluation-section .media {
+		padding: 35px 40px;
+		box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
+		border-radius: 4px;
+	}
+
+	.evaluation-section .media .media-body h5{
+		font-size: 1.125rem;
+		line-height: 1.5;
+		font-weight: 600;
+		color: #031b4e;
+	}
+	.evaluation-section .media i{
+		padding:0px;
+		background-color: #ffffff;
+		font-size: 35px;
+	}
+	.evaluation-section .media .media-body p{
+		opacity: .75;
+		color: #8893b9;
+		font-size: 1rem;
+    	line-height: 1.6875;
+	}
+	.analyze-box{
+		position:relative;
+		padding: 40px 40px;
+		box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.07);
+		border-radius:10px;
+	}
+	.edit-icon{
+		background-color: #41a9e0;
+		color:#ffffff;
+		font-size:35px !important;
+		padding: 10px 10px;
+	    border-radius: 9px;
+	    margin-bottom:15px;
+	}
+	.edit-heart-icon{
+		background-color: red;
+		color:#ffffff;
+		font-size:35px !important;
+		padding: 10px 10px;
+	    border-radius: 9px;
+	    margin-bottom:15px;
+	}
+	.edit-bag-icon{
+		background-color: #6e8fc7;
+		color:#ffffff;
+		font-size:35px !important;
+		padding: 10px 10px;
+	    border-radius: 9px;
+	    margin-bottom:15px;
+	}
+	.edit-overlay{
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		height:0;
+		width:100%;
+		background:url('../images/science1.jpg');
+		transition: all 2s;
+		border-radius:10px;
+		opacity:0.5;
+		z-index: 1;
+	}
+	.amz1:hover .edit-overlay{
+		height:100%;
+		z-index:-1;
+	}
+
+	
